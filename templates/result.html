@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YouTube Video Download Result</title>
+</head>
+<body>
+  <h2>Download Result</h2>
+  {% if download_message %}
+  <h2>Download Successful!</h2>
+  <p>{{ download_message }}</p>
+{% elif error_message %}
+  <h2>Error</h2>
+  <p>{{ error_message }}</p>
+{% else %}
+  <!-- Add your form or other content here -->
+{% endif %}
+
+
+
+</body>
+</html>

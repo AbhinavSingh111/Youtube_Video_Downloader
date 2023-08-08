@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}This services title template is being inherited from base.html{% endblock title %}
+{% block body %}
+<div class="container-fluid">
+    <h2>YouTube Video Downloader</h2>
+    <form action="{% url 'services' %}" method="post">
+      {% csrf_token %}
+      <label for="url">Enter YouTube URL:</label>
+      <input type="text" id="url" name="url" required><br><br>
+      <input type="submit" value="Download">
+    </form>
+</div>
+
+
+{% endblock body %}
